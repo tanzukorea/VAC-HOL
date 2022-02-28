@@ -76,7 +76,12 @@ VAC UI console에서 Container Detail에 들어가서 저장소의 위치를 복
 
 9. Project로 가서 다운로드가 된 이미지를 확인합니다.
 ![](images/project_repo1.png)
+
 10. 생성된 Project를 클릭해서 들어가면 repository가 다운로드 되어 있습니다.
 ![](images/project_repo2.png)
+
 11. 해당 Repository로 다시 클릭해서 들어가면 선택한 2.5.0 버전들들에 대한 하위 버전들까지 102개의 Artifacts들이 다운로드 되어 있는 것을 확인할 수 있습니다. 필요 없는 부분들을 제외하기 위해 조금 더 상세하게 설정해서 특정 버전만 다운로드 받도록 설정할 수 있습니다.
 ![](images/project_repo3.png)
+
+
+[이전으로 가기](../../)
