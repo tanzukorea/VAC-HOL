@@ -63,6 +63,17 @@ New Porject를 클릭해서 tac라는 이름으로 생성합니다.
 
 ## 4. chart-syncer 실행하기
 
+다음을 환경변수에 설정해야 합니다.
+
+아래 환경변수에 Harbor 계정정보로 수정하신 후 적용하세요. Windows의 경우 cmd창에서 export 대신 SET 으로 설정하시면 됩니다.
+
+```
+export TARGET_REPO_AUTH_USERNAME=admin
+export TARGET_REPO_AUTH_PASSWORD=Harbor12345
+export TARGET_CONTAINERS_AUTH_USERNAME=admin
+export TARGET_CONTAINERS_AUTH_PASSWORD=Harbor12345
+```
+
 위에서 생성한 yaml 파일을 (예: config.yaml) 옵션에 넣고 아래의 명령어로 실행합니다.
 모든 버전이 아닌 가장 최신 버전만 download 하도록 옵션을 넣습니다.
 
