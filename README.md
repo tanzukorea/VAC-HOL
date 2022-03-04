@@ -24,4 +24,4 @@ Lab 1. [VAC Console UI 살펴보기](vac_console.md)
 
 Lab 2. [VAC --> Harbor : 이미지 전송](vac_onpremise.md)
 
-Lab 3. Kubeapps를 이용해 Chart 설치하기(vac_kubeapps.md)
+Lab 3. [Kubeapps를 이용해 Chart 설치하기](vac_kubeapps.md)
