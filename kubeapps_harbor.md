@@ -1,4 +1,4 @@
-# Harbor의 Chart 와 Kubeapps를 이용해 배포
+# Harbor의 Chart 와 Kubeapps를 이용해 배포 (working)
 1. Harbor 의 CA키가 self-sign으로 만든 인증서인 경우 chart-syncer시에 인증서를 체크하기 때문에 local pc에 등록해야 함
 mac의 경우 
 
