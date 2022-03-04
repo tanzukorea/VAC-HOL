@@ -2,7 +2,12 @@
 
 ## 사전 준비 사항
 * Kubernetes 환경 (예: Tanzu Kubernetes Grid) 
-* Local에 Helm 설치 (https://helm.sh/docs/intro/install/) 
+* Local에 Helm 3.6.x 버전 설치 (https://helm.sh/docs/intro/install/) 
+  https://github.com/helm/helm/releases/tag/v3.6.3
+```
+*** 주의 
+Helm 3.7 버전부터 chart를 호출하는 방식이 약간 변경이 되어 에러가 발생함. 
+```
 
 ## 1. Kubeapps 설치하기
 

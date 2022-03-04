@@ -1,4 +1,4 @@
-# VAC의 Chart + Kubeapps를 이용해 배포
+# VAC의 Chart와 Kubeapps를 이용해 배포
 
 ### 1. Repository 등록하기
 
