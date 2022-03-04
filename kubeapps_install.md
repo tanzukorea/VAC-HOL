@@ -44,7 +44,7 @@ Token 값은 위에서 얻은 값을 사용합니다.
 
 이제 Repository를 등록해서 Catalog에 chart목록이 나오도록 해보겠습니다.
 
-[이전으로 가기](../)
+[이전으로 가기](./vac_kubeapps.md)
 
 -----
 ###  인터넷 제한 환경에서 Kubeapps 설치하기
