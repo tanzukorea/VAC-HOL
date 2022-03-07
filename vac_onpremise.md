@@ -22,6 +22,6 @@ VAC 에서는 Chart도 리소스로 제공하고 있는데 Harbor Replication �
 ![](images/chart_sync_arch.png)
 
 1. [Harbor Replication (Container Image만 전송 가능)](vac_harbor_replication.md)
-2. [오픈소스 Chart-Syncer 툴 이용 (chart / Container Image 모두 가능)](vac_chartsyncer.md)
+2. [오픈소스 Chart-Syncer 툴 이용 (chart / Container Image 모두 가능)](vac_chartsyncer_oci.md)
 
 
