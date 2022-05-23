@@ -19,7 +19,8 @@ tar -xvf kubeapps-8.1.1.tar
 
 ```
 다음 스크립트를 이용해서 chart에서 사용하는 이미지를 추출하고 upload하는 스크립트를 각각 만들어 줍니다.
-![이미지 추출 스크립트](./extractImage.sh)
+
+[이미지 추출 스크립트](./extractImage.sh)
 
 스크립트 실행 방법
 Usage : extractImage.sh [chart directory] [Private Image Registry URL] [UserName] [Password]
