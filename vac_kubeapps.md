@@ -7,5 +7,6 @@ VAC의 Chart를 직접 kubeapps에 등록해서 사용하는 방법과 Harbor의
 어떤 방법을 사용해도 가능하지만, 만약 Kubernetes환경이 인터넷이 제한된 환경인 경우에는 두 번째 방법을 이용하시면 되겠습니다.
 
 ## 1. [Kubeapps 설치하기](kubeapps_install.md)
+## 1. [Kubeapps 설치하기 (Offline) - 인터넷이 제한된 환경에서 설치하기](kubeapps_install_offline.md)
 ## 2. [VAC의 Chart와 Kubeapps를 이용해 배포](kubeapps_vac.md)
 ## 3. [Harbor의 Chart와 Kubeapps를 이용해 배포](kubeapps_harbor.md)

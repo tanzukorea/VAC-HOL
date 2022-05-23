@@ -52,16 +52,3 @@ Token 값은 위에서 얻은 값을 사용합니다.
 [이전으로 가기](./vac_kubeapps.md)
 
 -----
-###  인터넷 제한 환경에서 Kubeapps 설치하기
-
-인터넷이 제한된 환경에서 설치를 위해서는 helm-chart를 다운로드 받아서 설치를 하시면 됩니다.
-
-```
-helm pull --untar https://charts.bitnami.com/bitnami/kubeapps-4.0.4.tgz
-helm dep update ./kubeapps
-```
-상세 절차는 아래를 참조하시기 바랍니다.
-
-https://github.com/kubeapps/kubeapps/blob/main/docs/user/offline-installation.md
-
-
