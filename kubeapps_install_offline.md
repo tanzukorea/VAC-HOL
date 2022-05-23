@@ -75,9 +75,11 @@ Token 값은 위에서 얻은 값을 사용합니다.
 ## 2. bitnami app 설치하기
 원하는 bitnami image download 합니다.
 예를 들어 apache의 경우는 아래와 같습니다.
+```
 helm pull https://charts.bitnami.com/bitnami/apache-9.1.2.tgz
 gzip -d apache-9.1.2.tgz
 tar -xvf apache-9.1.2.tar
+```
 
 위에서 다운로드 받은 ./extractImage.sh 를 실행합니다.
 동일하게 save.sh 와 load.sh가 생성됩니다.
@@ -86,7 +88,7 @@ save.sh를 실행하면 apache에서 사용하는 이미지들이 bitnami 폴더
 
 이외에 필요한 application을 download를 해서 upload하시면 됩니다.
 
+```
 helm pull https://charts.bitnami.com/bitnami/tomcat-10.2.1.tgz
 helm pull https://charts.bitnami.com/bitnami/nginx-11.1.2.tgz
-
-
+```
