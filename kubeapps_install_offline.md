@@ -10,7 +10,8 @@ Helm 3.7 버전부터 chart를 호출하는 방식이 약간 변경이 되어 �
 ```
 
 ## 1. Kubeapps 설치하기
-다음의 작업은 인터넷이 되는 환경과 제한된 환경에서 가각 수행합니다.
+### 1. Chart 와 이미지 다운로드
+다음의 작업은 인터넷이 되는 환경과 제한된 환경에서 각각 수행합니다.
 [인터넷이 되는 환경에서 수행]
 ```
 helm pull https://charts.bitnami.com/bitnami/kubeapps-8.1.1.tgz
@@ -35,7 +36,7 @@ bitnami 폴더의 파일들을 인터넷이 제한된 환경으로 옮깁니다.
 동일하게 tar 파일을 압축해제합니다.
 load.sh : (local에 저장되어 있는 tar파일을 private repository에 upload)
 
-### 1. Kubeapps는 Helm을 이용해 Kubernetes Cluster에 설치합니다.
+### 2. Kubeapps는 Helm을 이용해 Kubernetes Cluster에 설치합니다.
 앞에서 tar파일을 해제한 kubeapps 상위 디렉토리에서 실행합니다.
 ```
 kubectl create namespace kubeapps
@@ -43,21 +44,21 @@ helm install kubeapps --namespace kubeapps ./kubeapps --set global.imageRegistry
 
 ```
 
-### 2. 아래 명령어를 실행해서 Demo Credentail을 만들어서 접근해보도록 하겠습니다.
+### 3. 아래 명령어를 실행해서 Demo Credentail을 만들어서 접근해보도록 하겠습니다.
 
 ```
 kubectl create --namespace default serviceaccount kubeapps-operator
 kubectl create clusterrolebinding kubeapps-operator --clusterrole=cluster-admin --serviceaccount=default:kubeapps-operator
 ```
 
-### 3. Mac & Linux에서는 아래의 명령어를 실행해서 Token을 얻습니다.
+### 4. Mac & Linux에서는 아래의 명령어를 실행해서 Token을 얻습니다.
 
 ```
 kubectl get --namespace default secret $(kubectl get --namespace default serviceaccount kubeapps-operator -o jsonpath='{range .secrets[*]}{.name}{"\n"}{end}' | grep kubeapps-operator-token) -o jsonpath='{.data.token}' -o go-template='{{.data.token | base64decode}}' && echo
 ```
 Windows는 다음 참조 : https://github.com/kubeapps/kubeapps/blob/main/docs/user/getting-started.md
 
-### 4. Dashboard 접근하기
+### 5. Dashboard 접근하기
 다음 명령어로 port forward를 수행합니다.
 ```
 kubectl port-forward -n kubeapps svc/kubeapps 8080:80
@@ -71,7 +72,7 @@ Token 값은 위에서 얻은 값을 사용합니다.
 ![](images/kubeapps_dashboard-home.png)
 
 
-### 5. bitnami app 설치하기
+## 2. bitnami app 설치하기
 원하는 bitnami image download 합니다.
 예를 들어 apache의 경우는 아래와 같습니다.
 helm pull https://charts.bitnami.com/bitnami/apache-9.1.2.tgz
