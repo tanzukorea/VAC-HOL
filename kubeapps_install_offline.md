@@ -78,7 +78,8 @@ Token 값은 위에서 얻은 값을 사용합니다.
 ![](images/kubeapps_dashboard-home.png)
 
 
-## 2. bitnami app 설치하기
+## 2. bitnami app 이미지 설치하기
+### 1. 이미지 download 및 upload 하기
 원하는 bitnami image download 합니다.
 예를 들어 apache의 경우는 아래와 같습니다.
 ```
@@ -98,3 +99,29 @@ save.sh를 실행하면 apache에서 사용하는 이미지들이 bitnami 폴더
 helm pull https://charts.bitnami.com/bitnami/tomcat-10.2.1.tgz
 helm pull https://charts.bitnami.com/bitnami/nginx-11.1.2.tgz
 ```
+
+### 2. app helm chart 설치하기
+위에서 한 과정은 container image만 upload 한 것입니다. kubeapps에서는 helm chart를 이용해서 배포를 하게 되므로 helm chart를 업로드 해야 합니다.
+
+환경 변수를 설정합니다.
+```
+export HELM_EXPERIMENTAL_OCI=1
+```
+앞에서 압축을 해제한 apache, tomcat, nginx 등에 대하여 아래의 형식으로 tag를 달고 push를 합니다.
+```
+helm chart save CHART_PATH [private 이미지 저장소 주소]/bitnami/REPOSITORY[:TAG]
+helm chart push [private 이미지 저장소 주소]/bitnami/REPOSITORY[:TAG]
+```
+
+예를 들어 private registry의 이름이 harbor.tanzukorea.kr 이고 apache를 업로드 하는 경우에는 다음과 같이 수행합니다.
+
+```
+helm chart save apache harbor.tanzukorea.kr/bitnami/apache:9.1.2
+helm chart push harbor.tanzukorea.kr/bitnami/apache:9.1.2
+```
+
+정상적으로 업로드가 되면 harbor에서 다음과 같이 helm chart에 대해서 확인할 수 있습니다.
+
+![](images/helm1.png)
+
+![](images/helm2.png)
