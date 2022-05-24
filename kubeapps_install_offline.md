@@ -121,6 +121,13 @@ helm chart save apache harbor.tanzukorea.kr/bitnami/apache:9.1.2
 helm chart push harbor.tanzukorea.kr/bitnami/apache:9.1.2
 ```
 
+* helm 버전이 3.7 이상인 경우
+helm 3.7 이상 에서는 chart 명령어가 없기 때문에 아래와 같이 다운받은 tgz 파일을 직접 push 하시면 됩니다.
+
+```
+helm push tomcat-10.2.1.tgz oci://harbor.tanzukorea.kr/bitnami/tomcat
+```
+
 정상적으로 업로드가 되면 harbor에서 다음과 같이 helm chart에 대해서 확인할 수 있습니다.
 
 ![](images/helm1.png)
