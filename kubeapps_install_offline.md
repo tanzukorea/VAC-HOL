@@ -37,8 +37,9 @@ bitnami 폴더가 생성이 되고 그 안에 이미지들이 압축되어 저�
 bitnami 폴더의 파일들을 인터넷이 제한된 환경으로 옮깁니다.
 
 #### [아래 과정은 인터넷이 제한된 환경에서 수행]
+먼저 harbor에서 bitnami라는 이름으로 project를 생성합니다.
 
-위와 동일하게 tar 파일을 압축해제합니다.
+위에서 과정과 동일하게 kubeapps-8.1.1.tar 파일을 압축해제합니다.
 
 load.sh : (local에 저장되어 있는 tar파일을 private repository에 upload)
 
